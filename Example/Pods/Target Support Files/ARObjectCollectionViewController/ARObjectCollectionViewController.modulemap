@@ -1,0 +1,6 @@
+framework module ARObjectCollectionViewController {
+  umbrella header "ARObjectCollectionViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

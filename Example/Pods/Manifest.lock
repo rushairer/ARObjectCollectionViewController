@@ -1,0 +1,16 @@
+PODS:
+  - ARObjectCollectionViewController (0.1.0)
+
+DEPENDENCIES:
+  - ARObjectCollectionViewController (from `../`)
+
+EXTERNAL SOURCES:
+  ARObjectCollectionViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ARObjectCollectionViewController: 82c719c4f653163531206f2f31a4de740355fa3c
+
+PODFILE CHECKSUM: f61e5ab2f39938357119fce3afd944f24261df15
+
+COCOAPODS: 1.9.1
