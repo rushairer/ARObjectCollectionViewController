@@ -1,6 +1,6 @@
 use_frameworks!
 platform :ios, '9.0'
-source 'git@github.com:rushairer/iOSSpec.git'
+source 'https://github.com/rushairer/iOSSpec.git'
 
 target 'ARObjectCollectionViewController_Tests' do
   pod 'ARObjectCollectionViewController', :path => '../'

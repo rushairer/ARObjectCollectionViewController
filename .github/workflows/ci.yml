@@ -1,0 +1,24 @@
+name: ARObjectCollectionViewController CI
+on:
+    push:
+        tags:
+            - '*.*.*'
+    pull_request:
+        tags:
+            - '*.*.*'
+jobs:
+    pod_lib_update:
+        name: Push
+        runs-on: macOS-latest
+        env:
+            DEVELOPER_DIR: /Applications/Xcode_11.4.app/Contents/Developer
+        steps:
+            - name: Check out
+              uses: actions/checkout@v2
+            - name: Push pod lib
+              uses: wlixcc/pod-lib-update-action@1.0.0
+              with:
+                  spec_repo_url: 'https://rushairer:${{ secrets.ACCESS_TOKEN }}@github.com/rushairer/iOSSpec.git'
+                  spec_file_path: '/ARObjectCollectionViewController.podspec'
+                  lint_args: '--allow-warnings --sources=https://cdn.cocoapods.org,https://github.com/rushairer/iOSSpec.git'
+                  push_args: '--allow-warnings --sources=https://cdn.cocoapods.org,https://github.com/rushairer/iOSSpec.git'

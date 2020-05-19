@@ -1,5 +1,5 @@
 PODS:
-  - ARObjectCollectionViewController (0.1.0)
+  - ARObjectCollectionViewController (0.1.1)
 
 DEPENDENCIES:
   - ARObjectCollectionViewController (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ARObjectCollectionViewController: 82c719c4f653163531206f2f31a4de740355fa3c
+  ARObjectCollectionViewController: bbeb0883b65136bea596b91a83a507e35a9f68c6
 
 PODFILE CHECKSUM: f61e5ab2f39938357119fce3afd944f24261df15
 

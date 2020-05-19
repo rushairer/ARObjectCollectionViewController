@@ -213,7 +213,8 @@
     if ([self.objectCollection isKindOfClass:[NSDictionary class]])
     {
         id value = [self valueForIndexPath:indexPath];
-        if (![value isKindOfClass:[NSDictionary class]] && ![value isKindOfClass:[NSSet class]] && ![value isKindOfClass:[NSArray class]] && !([value isKindOfClass:[NSString class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:value]]))
+        
+        if (![value isKindOfClass:[NSDictionary class]] && ![value isKindOfClass:[NSSet class]] && ![value isKindOfClass:[NSArray class]] && !([value isKindOfClass:[NSString class]] && [NSURL URLWithString:value] != nil && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:value]]))
         {
             if ([value isKindOfClass:[NSNull class]])
             {
@@ -233,7 +234,7 @@
     if ([self.objectCollection isKindOfClass:[NSDictionary class]] || [self.objectCollection isKindOfClass:[NSArray class]])
     {
         id value = [self valueForIndexPath:indexPath];
-        if ([value isKindOfClass:[NSDictionary class]] || [value isKindOfClass:[NSSet class]] || [value isKindOfClass:[NSArray class]] || ([value isKindOfClass:[NSString class]] && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:value]]))
+        if ([value isKindOfClass:[NSDictionary class]] || [value isKindOfClass:[NSSet class]] || [value isKindOfClass:[NSArray class]] || ([value isKindOfClass:[NSString class]] && [NSURL URLWithString:value] != nil && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:value]]))
         {
             return UITableViewCellAccessoryDisclosureIndicator;
         }
